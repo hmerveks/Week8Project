@@ -38,12 +38,137 @@ public class test1 {
     }
 
     @Test
-    public void testCase1() {
-        final String testString = "Hello!";
+    public void checkNumberEven1() {
+        final String testString = "2";
         provideInput(testString);
 
-        main1.main(new String[0]);
+        checkNumberEven.main(new String[0]);
 
-        Assert.assertEquals(testString, getOutput());
+        String result = "true";
+        Assert.assertTrue("output is not a true ", getOutput().contains(result));
     }
+
+    @Test
+    public void checkNumberEven2() {
+        final String testString = "5";
+        provideInput(testString);
+
+        checkNumberEven.main(new String[0]);
+
+        Assert.assertEquals("false", getOutput());
+    }
+
+    @Test
+    public void totalLetterCountCheck1() {
+        final String testString = "Editor";
+        provideInput(testString);
+
+        totalLetterCountCheck.main(new String[0]);
+
+        Assert.assertEquals("false", getOutput());
+    }
+
+    @Test
+    public void totalLetterCountCheck2() {
+        final String testString = "consist";
+        provideInput(testString);
+
+        totalLetterCountCheck.main(new String[0]);
+
+        Assert.assertEquals("true", getOutput());
+    }
+
+    @Test
+    public void days1() {
+        final String testString = "5";
+        provideInput(testString);
+
+        totalLetterCountCheck.main(new String[0]);
+
+        Assert.assertTrue("true", getOutput().toLowerCase().contains("friday"));
+    }
+
+    @Test
+    public void days2() {
+        final String testString = "2";
+        provideInput(testString);
+
+        totalLetterCountCheck.main(new String[0]);
+
+        Assert.assertTrue("true", getOutput().toLowerCase().contains("tuesday"));
+    }
+
+    @Test
+    public void days3() {
+        final String testString = "7";
+        provideInput(testString);
+
+        totalLetterCountCheck.main(new String[0]);
+
+        Assert.assertTrue("true", getOutput().toLowerCase().contains("sunday"));
+    }
+
+
+    @Test
+    public void days4() {
+        final String testString = "10";
+        provideInput(testString);
+
+        totalLetterCountCheck.main(new String[0]);
+
+        Assert.assertTrue("true", getOutput().toLowerCase().contains("this is not a valid day"));
+    }
+
+    @Test
+    public void age1() {
+        final String testString = "16";
+        provideInput(testString);
+
+        age.main(new String[0]);
+
+        Assert.assertTrue("out put should be too young to get a tattoo your out put is :: " + getOutput(), getOutput().toLowerCase().contains("too young to get a tattoo"));
+    }
+
+    @Test
+    public void age2() {
+        final String testString = "21";
+        provideInput(testString);
+
+        age.main(new String[0]);
+
+        Assert.assertTrue("out put should be do what ever you want to do your out put is :: " + getOutput() , getOutput().toLowerCase().contains("do what ever you want to do"));
+    }
+
+    @Test
+    public void age3() {
+        final String testString = "10";
+        provideInput(testString);
+
+        age.main(new String[0]);
+
+        Assert.assertTrue("out put should be too young to get a driver's license your out put is :: " + getOutput() , getOutput().toLowerCase().contains("do what ever you want to do"));
+    }
+
+
+    @Test
+    public void perfectSquare1() {
+        final String testString = "100";
+        provideInput(testString);
+
+        age.main(new String[0]);
+
+        Assert.assertTrue("out put should true your out put is :: " + getOutput() , getOutput().contains("true"));
+    }
+
+    @Test
+    public void perfectSquare2() {
+        final String testString = "55";
+        provideInput(testString);
+
+        age.main(new String[0]);
+
+        Assert.assertTrue("out put should be false your out put is :: " + getOutput() , getOutput().toLowerCase().contains("false"));
+    }
+ 
+
 }

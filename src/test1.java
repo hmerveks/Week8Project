@@ -7,6 +7,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Random;
 
 public class test1 {
 
@@ -169,6 +170,107 @@ public class test1 {
 
         Assert.assertTrue("out put should be false your out put is :: " + getOutput() , getOutput().toLowerCase().contains("false"));
     }
- 
 
+    @Test
+    public void printEvenNumbers1() {
+        final String testString = "15";
+        provideInput(testString);
+
+        printEvenNumbers.main(new String[0]);
+
+        int i1 = Integer.parseInt(testString);
+        for(int i = 0; i <= i1 ; i++  ){
+            if(i%2==0) {
+                String num = String.valueOf(i);
+
+                Assert.assertTrue("out put should be false your out put is :: " + getOutput(), getOutput().contains(num));
+            }
+        }
+
+    }
+
+    @Test
+    public void printEvenNumbers2() {
+        final String testString = "6";
+        provideInput(testString);
+
+        printEvenNumbers.main(new String[0]);
+
+        int i1 = Integer.parseInt(testString);
+        for(int i = 0; i < i1 ; i++  ){
+           if(i%2==0) {
+               String num = String.valueOf(i);
+
+               Assert.assertTrue("out put should be false your out put is :: " + getOutput(), getOutput().contains(num));
+           }
+        }
+
+    }
+
+    @Test
+    public void RandomNum() {
+        final String testString = "10";
+        provideInput(testString);
+
+        RandomNum.main(new String[0]);
+
+        int i1 = Integer.parseInt(testString);
+
+
+
+            String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+
+            int num = Integer.parseInt(s1.trim());
+
+            Assert.assertTrue("out put should be between 0 to 10 but  your out put is :: " + getOutput(), 0<=num && num <=10);
+
+
+
+    }
+
+    @Test
+    public void RandomNum2() {
+        final String testString = "20";
+        provideInput(testString);
+
+        RandomNum.main(new String[0]);
+
+        int i1 = Integer.parseInt(testString);
+
+        String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+        int num = Integer.parseInt(s1.trim());
+
+        Assert.assertTrue("out put should be between 0 to 10 but  your out put is :: " + getOutput(), 0<=num && num <=20);
+
+    }
+
+    @Test
+    public void RandomNumberBetweenTwoNumbers1() {
+        final String testString = "70 100";
+        provideInput(testString);
+        RandomNumberBetweenTwoNumbers.main(new String[0]);
+
+        String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+        int num = Integer.parseInt(s1.trim());
+
+        Assert.assertTrue("out put should be between 70 to 100 but  your out put is :: " + getOutput(), 70<=num && num <=100);
+
+    }
+
+    @Test
+    public void RandomNumberBetweenTwoNumbers2() {
+        final String testString = "40 70";
+        provideInput(testString);
+        RandomNumberBetweenTwoNumbers.main(new String[0]);
+
+        String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+        int num = Integer.parseInt(s1.trim());
+
+        Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), 40<=num && num <=70);
+
+    }
 }

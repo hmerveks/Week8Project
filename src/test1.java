@@ -46,7 +46,7 @@ public class test1 {
         checkNumberEven.main(new String[0]);
 
         String result = "true";
-        Assert.assertTrue("output is not a true ", getOutput().contains(result));
+        Assert.assertTrue("out put should be true but your out put is" + getOutput() , getOutput().contains(result));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class test1 {
 
         checkNumberEven.main(new String[0]);
 
-        Assert.assertEquals("false", getOutput());
+        Assert.assertEquals("out put should be false but your out put is" + getOutput() , "false", getOutput());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertEquals("false", getOutput());
+        Assert.assertEquals("out put should be false but your out put is" + getOutput(),"false", getOutput());
     }
 
     @Test
@@ -76,7 +76,7 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertEquals("true", getOutput());
+        Assert.assertEquals("out put should be true but your out put is" + getOutput(),"true", getOutput());
     }
 
     @Test
@@ -86,7 +86,7 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertTrue("true", getOutput().toLowerCase().contains("friday"));
+        Assert.assertTrue("out put should be friday but your out put is" + getOutput(), getOutput().toLowerCase().contains("friday"));
     }
 
     @Test
@@ -96,7 +96,7 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertTrue("true", getOutput().toLowerCase().contains("tuesday"));
+        Assert.assertTrue("out put should be tuesday but your out put is" + getOutput(), getOutput().toLowerCase().contains("tuesday"));
     }
 
     @Test
@@ -106,7 +106,7 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertTrue("true", getOutput().toLowerCase().contains("sunday"));
+        Assert.assertTrue("out put should be sunday but your out put is" + getOutput(), getOutput().toLowerCase().contains("sunday"));
     }
 
 
@@ -117,7 +117,7 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertTrue("true", getOutput().toLowerCase().contains("this is not a valid day"));
+        Assert.assertTrue("out put should be this is not a valid day but your out put is " + getOutput(), getOutput().toLowerCase().contains("this is not a valid day"));
     }
 
     @Test
@@ -201,7 +201,7 @@ public class test1 {
            if(i%2==0) {
                String num = String.valueOf(i);
 
-               Assert.assertTrue("out put should be false your out put is :: " + getOutput(), getOutput().contains(num));
+               Assert.assertTrue("out put should be true your out put is :: " + getOutput(), getOutput().contains(num));
            }
         }
 
@@ -236,13 +236,11 @@ public class test1 {
 
         RandomNum.main(new String[0]);
 
-        int i1 = Integer.parseInt(testString);
-
         String s1 =getOutput().replaceAll("[^\\d.]", "");
 
         int num = Integer.parseInt(s1.trim());
 
-        Assert.assertTrue("out put should be between 0 to 10 but  your out put is :: " + getOutput(), 0<=num && num <=20);
+        Assert.assertTrue("out put should be between 0 to 20 but  your out put is :: " + getOutput(), 0<=num && num <=20);
 
     }
 
@@ -271,6 +269,48 @@ public class test1 {
         int num = Integer.parseInt(s1.trim());
 
         Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), 40<=num && num <=70);
+
+    }
+
+    @Test
+    public void getTotal1() {
+        final String testString = "$10 $13 $12";
+        provideInput(testString);
+        getTotal.main(new String[0]);
+
+        String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+        int num = Integer.parseInt(s1.trim());
+
+        Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), num==35);
+
+    }
+
+    @Test
+    public void getTotal2() {
+        final String testString = "$-20 $0 $0";
+        provideInput(testString);
+        getTotal.main(new String[0]);
+
+        String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+        int num = Integer.parseInt(s1.trim());
+
+        Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), num==-1);
+
+    }
+
+    @Test
+    public void getTotal3() {
+        final String testString = "$0 $0 $0";
+        provideInput(testString);
+        getTotal.main(new String[0]);
+
+        String s1 =getOutput().replaceAll("[^\\d.]", "");
+
+        int num = Integer.parseInt(s1.trim());
+
+        Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), num==0);
 
     }
 }

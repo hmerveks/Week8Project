@@ -10,7 +10,6 @@ public class RandomNumberBetweenTwoNumbers {
      integer 1 is min
      integer 2 is max
 
-
     create a random number between min and max
 
      */
@@ -27,12 +26,8 @@ public class RandomNumberBetweenTwoNumbers {
         int max = Integer.parseInt(elements[1]);
 
         //  code Start here don't change before this line
-  
-        Random r = new Random();
 
-        int result = r.nextInt(max-min) + min;
 
-        System.out.println(result);
 
     }
 }

@@ -57,7 +57,8 @@ public class test1 {
 
         checkNumberEven.main(new String[0]);
 
-        Assert.assertEquals("out put should be false but your out put is" + getOutput() , "false", getOutput());
+        String result = "false";
+        Assert.assertTrue("out put should be false but your out put is  " + getOutput() ,  getOutput().contains(result));
     }
 
     @Test
@@ -67,7 +68,8 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertEquals("out put should be false but your out put is" + getOutput(),"false", getOutput());
+        String result = "false";
+        Assert.assertTrue("out put should be false but your out put is " + getOutput(), getOutput().contains(result));
     }
 
     @Test
@@ -77,7 +79,8 @@ public class test1 {
 
         totalLetterCountCheck.main(new String[0]);
 
-        Assert.assertEquals("out put should be true but your out put is" + getOutput(),"true", getOutput());
+        String result = "true";
+        Assert.assertTrue("out put should be true but your out put is " + getOutput(),getOutput().contains(result));
     }
 
     @Test
@@ -148,7 +151,7 @@ public class test1 {
 
         age.main(new String[0]);
 
-        Assert.assertTrue("out put should be too young to get a driver's license your out put is :: " + getOutput() , getOutput().toLowerCase().contains("do what ever you want to do"));
+        Assert.assertTrue("out put should be too young to get a driver's license your out put is :: " + getOutput() , getOutput().toLowerCase().contains("too young to get a driver's license"));
     }
 
 
@@ -293,11 +296,9 @@ public class test1 {
         provideInput(testString);
         getTotal.main(new String[0]);
 
-        String s1 =getOutput().replaceAll("[^\\d.]", "");
+        String s1 =getOutput();
 
-        int num = Integer.parseInt(s1.trim());
-
-        Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), num==-1);
+        Assert.assertTrue("out put should be -1 but  your out put is :: " + getOutput(), s1.contains("-1"));
 
     }
 

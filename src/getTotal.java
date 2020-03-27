@@ -4,7 +4,8 @@ public class getTotal {
 
 
       /*
-       Given three positive Strings
+
+        Given three positive Strings
 
         remove all the non numeric numbers.
 

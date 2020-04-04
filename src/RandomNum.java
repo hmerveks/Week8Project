@@ -9,12 +9,13 @@ public class RandomNum {
 
     create a random number between 0 to max
 
+    output should be int
+
      */
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
 
         int max = Integer.parseInt(scanner.nextLine());
 

@@ -10,9 +10,12 @@ public class factorialNumber {
         Example:
         number:7
         factorial:1*2*3*4*5*6*7=5040
+        output should be == 5040
 
         number:6
         factorial:1*2*3*4*5*6=720
+        output should be == 720
+
        */
 
         Scanner dp = new Scanner(System.in);

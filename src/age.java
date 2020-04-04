@@ -18,6 +18,8 @@ public class age {
 
             if the age bigger or equal to 21
                 print  do what ever you want to do
+
+
      */
 
 

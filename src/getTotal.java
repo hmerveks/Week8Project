@@ -6,21 +6,17 @@ public class getTotal {
       /*
 
         Given three positive Strings
-
         remove all the non numeric numbers.
-
         change the Strings to int
-
         and print the total
 
         Example:
-        String s1 = "$15";
-        String s2 = "$20";
-        String s3 = "$30";
+        String num1 = "$15";
+        String num2 = "$20";
+        String num3 = "$30";
+        output should be == 65;
 
-        print 65;
-
-        NOTE : if the result less then 0 print -1
+        NOTE : if the output less then 0 change output to -1
 
      */
 
@@ -39,6 +35,7 @@ public class getTotal {
         String num3 = elements[2];
 
         //  code Start here don't change before this line
+        //   use Strings num1 , num2 , num3
 
 
 

@@ -12,6 +12,8 @@ public class RandomNumberBetweenTwoNumbers {
 
     create a random number between min and max
 
+    output should be int
+
      */
 
     public static void main(String[] args) {

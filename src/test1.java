@@ -301,6 +301,7 @@ public class test1 {
 
     }
 
+    
     @Test
     public void getTotal3() {
         final String testString = "$0 $0 $0";

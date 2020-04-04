@@ -32,13 +32,15 @@ public class getTotal {
 
         String[] elements = allElements.split(" ");
 
-        String s1 = elements[0];
+        String num1 = elements[0];
 
-        String s2 = elements[1];
+        String num2 = elements[1];
 
-        String s3 = elements[2];
+        String num3 = elements[2];
 
         //  code Start here don't change before this line
+
+
 
 
     }

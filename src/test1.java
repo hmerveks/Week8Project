@@ -11,7 +11,6 @@ import java.util.Random;
 
 public class test1 {
 
-
     private final InputStream systemIn = System.in;
     private final PrintStream systemOut = System.out;
 
@@ -315,4 +314,84 @@ public class test1 {
         Assert.assertTrue("out put should be between 40 to 70 but  your out put is :: " + getOutput(), num==0);
 
     }
+
+    @Test
+    public void factorialNumber1() {
+        final String testString = "7";
+        provideInput(testString);
+        factorialNumber.main(new String[0]);
+
+        String myOutput = getOutput().trim();
+
+        int intOutput = Integer.parseInt(myOutput);
+
+        Assert.assertTrue("out put should be 5040 but your out put is :: " + getOutput(), intOutput==5040);
+
+    }
+
+
+    @Test
+    public void factorialNumber2() {
+        final String testString = "9";
+        provideInput(testString);
+        factorialNumber.main(new String[0]);
+
+        String myOutput = getOutput().trim();
+
+        int intOutput = Integer.parseInt(myOutput);
+
+        Assert.assertTrue("out put should be 362880 but your out put is :: " + getOutput(), intOutput==362880);
+
+    }
+
+
+    @Test
+    public void twoString1() {
+        final String testString = "cat tac";
+        provideInput(testString);
+        twoString.main(new String[0]);
+
+        String s1 =getOutput();
+
+        Assert.assertTrue("out put should be -1 but  your out put is :: " + getOutput(), s1.contains("catac"));
+
+    }
+
+    @Test
+    public void twoString2() {
+        final String testString = "cat dog";
+        provideInput(testString);
+        twoString.main(new String[0]);
+
+        String s1 =getOutput();
+
+        Assert.assertTrue("out put should be -1 but  your out put is :: " + getOutput(), s1.contains("catdog"));
+
+    }
+
+    @Test
+    public void countE1() {
+        final String testString = "one barber to other barber";
+        provideInput(testString);
+        countE.main(new String[0]);
+
+        String s1 =getOutput();
+
+        Assert.assertTrue("out put should be 4 but  your out put is :: " + getOutput(), s1.contains("4"));
+
+    }
+
+    @Test
+    public void countE2() {
+        final String testString = "asdasdsa";
+        provideInput(testString);
+        countE.main(new String[0]);
+
+        String s1 =getOutput();
+
+        Assert.assertTrue("out put should be 0 but  your out put is :: " + getOutput(), s1.contains("0"));
+
+    }
+
+
 }

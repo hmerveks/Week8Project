@@ -1,8 +1,8 @@
 package Mortgage;
 
 public class HousePrices extends Users{
- 
 
+ 
 
    /*
             This class is extending the Users class
